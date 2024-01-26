@@ -18,6 +18,5 @@ class Solution:
         ds = []
         res = []
         self.combination_Sum(0, candidates, len(candidates), target, ds, res)
-        print(res)
         return res
         
