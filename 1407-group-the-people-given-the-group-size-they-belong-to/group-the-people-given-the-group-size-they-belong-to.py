@@ -12,6 +12,5 @@ class Solution:
                 d[arr[i]] = [i]
         for k, v in d.items():
             l.append(v)
-        l.sort()
         return l
         
