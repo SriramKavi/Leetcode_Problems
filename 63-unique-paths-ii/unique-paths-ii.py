@@ -3,9 +3,7 @@ class Solution:
         if i >= m or j >= n or grid[i][j] == 1:
             return 0
         if i == m - 1 and j == n - 1:
-            if grid[i][j] != 1:
-                return 1
-            return 0
+            return 1
         if dp[i][j] != -1:
             return dp[i][j]
         dp[i][j] = self.countPaths(i + 1, j, m, n, grid) + self.countPaths(i, j + 1, m, n, grid)
