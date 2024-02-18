@@ -1,14 +1,13 @@
 class Solution:
     def floodfill(self, i, j, image, color, m, n, vis, d):
-        if i >= m or j >= n or i < 0 or j < 0 or vis[i][j] == 1:
+        if i >= m or j >= n or i < 0 or j < 0 or vis[i][j] == 1 or image[i][j] != d:
             return
         vis[i][j] = 1
-        if image[i][j] == d:
-            image[i][j] = color
-            self.floodfill(i + 1, j, image, color, m, n, vis, d)
-            self.floodfill(i, j + 1, image, color, m, n, vis, d)
-            self.floodfill(i- 1, j, image, color, m, n, vis, d)
-            self.floodfill(i, j - 1, image, color, m, n, vis, d)
+        image[i][j] = color
+        self.floodfill(i + 1, j, image, color, m, n, vis, d)
+        self.floodfill(i, j + 1, image, color, m, n, vis, d)
+        self.floodfill(i- 1, j, image, color, m, n, vis, d)
+        self.floodfill(i, j - 1, image, color, m, n, vis, d)
 
 
 
