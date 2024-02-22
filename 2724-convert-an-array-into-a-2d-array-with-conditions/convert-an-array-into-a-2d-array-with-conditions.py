@@ -9,11 +9,9 @@ class Solution:
         m = max(list(d.values()))
         l = [[] for _ in range(m)]
         for k, v in d.items():
-            if v - 1 >= 0:
-                v = v - 1
-                while v >= 0:
-                    l[v].append(k)
-                    v = v - 1
+            while v - 1 >= 0:
+                l[v - 1].append(k)
+                v -= 1
         return l
                    
             
