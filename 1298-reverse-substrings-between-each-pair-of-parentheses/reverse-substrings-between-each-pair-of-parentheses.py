@@ -9,7 +9,6 @@ class Solution:
             else:
                 while len(stack) and stack[-1] != '(':
                     p.append(stack.pop())
-                print(p, stack)
                 if len(stack): stack.pop()
                 stack.extend(p)
                 p = []
