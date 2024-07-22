@@ -3,11 +3,9 @@ class Solution:
         strs.sort()
         n = len(strs[0])
         s = ''
-        if strs[0] == "" or strs[-1] == "":
-            return ""
+        a, b = strs[0], strs[-1]
         for i in range(n):
-            if strs[0][i] == strs[-1][i]:
-                s += strs[0][i]
-            else:
+            if a[i] != b[i]:
                 return s
+            s += a[i]
         return s
